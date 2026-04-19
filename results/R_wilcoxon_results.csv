@@ -1,0 +1,3 @@
+"Metric","Light_n","Light_median","Heavy_n","Heavy_median","W_statistic","p_value","Significant"
+"NVP",2315,3,2518,3,2848791,0.1647,FALSE
+"LDLJ",2315,1.384,2518,1.388,2871094,0.3695,FALSE
