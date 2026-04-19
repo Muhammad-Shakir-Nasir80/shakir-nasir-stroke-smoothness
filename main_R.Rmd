@@ -1,6 +1,6 @@
 ---
 title: "Stroke Movement Smoothness Analysis — R Analysis"
-author: "Lastname Firstname"
+author: "shakir nasir"
 date: "`r Sys.Date()`"
 output:
   html_document:
