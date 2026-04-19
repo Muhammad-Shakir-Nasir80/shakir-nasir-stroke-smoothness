@@ -5,7 +5,7 @@ Reusable functions for movement smoothness analysis.
 Used by main.ipynb — place this file in the sources/ folder.
 
 Author : Shakir nasir
-Course : Python-R-Git — Engineering and Ergonomics of Physical Activity
+Course : Python-R-Github for data analysis
 """
 
 import numpy as np
