@@ -2,7 +2,7 @@
 
 
 
-\*\*Course:\*\* Python-R-Git: Engineering and Ergonomics of Physical Activity  
+\*\*Course:\*\* Python-R-Git for data analysis  
 
 \*\*Student:\*\* Lastname Firstname  
 
