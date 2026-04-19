@@ -20,7 +20,7 @@
 
 
 
-Does target location in upper versus lower hemispace affect the motor smoothness of reach-to-grasp movements in chronic stroke patients, as measured by Number of Velocity Peaks (NVP) and Log Dimensionless Jerk (LDLJ)?
+Does object weight affect movement smoothness in chronic stroke patients of reach-to-grasp movements, as measured by Number of Velocity Peaks (NVP) and Log Dimensionless Jerk (LDLJ)?
 
 
 
