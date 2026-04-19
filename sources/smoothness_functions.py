@@ -4,7 +4,7 @@ smoothness_functions.py
 Reusable functions for movement smoothness analysis.
 Used by main.ipynb — place this file in the sources/ folder.
 
-Author : Lastname Firstname
+Author : Shakir nasir
 Course : Python-R-Git — Engineering and Ergonomics of Physical Activity
 """
 
