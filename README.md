@@ -4,7 +4,7 @@
 
 \*\*Course:\*\* Python-R-Git for data analysis  
 
-\*\*Student:\*\* Lastname Firstname  
+\*\*Student:\*\* shakir nasir  
 
 \*\*Date:\*\* 2026-04-19  
 
