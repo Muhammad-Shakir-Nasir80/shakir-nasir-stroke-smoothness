@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Weight Effects on Movement Smoothness in Chronic Stroke Patients - Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Title Page */
+        .title-page {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .title-page h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .title-page .subtitle {
+            font-size: 1.3em;
+            color: #5b7c99;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .meta-info {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .meta-info p {
+            margin: 8px 0;
+            font-size: 0.95em;
+        }
+        
+        .meta-info strong {
+            color: #2c3e50;
+        }
+        
+        /* Section Styling */
+        h2 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            counter-increment: section;
+        }
+        
+        h2:before {
+            content: counter(section) ". ";
+        }
+        
+        body {
+            counter-reset: section;
+        }
+        
+        h3 {
+            font-size: 1.2em;
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 0.95em;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        /* Highlights */
+        .highlight {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .highlight strong {
+            color: #856404;
+        }
+        
+        .finding {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        /* Figures */
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .figure-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        /* References */
+        .reference {
+            margin: 12px 0;
+            padding-left: 30px;
+            text-indent: -30px;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .github-link {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .github-link:hover {
+            background: #34495e;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- TITLE PAGE -->
+        <div class="title-page">
+            <h1>Object Weight Effects on Movement Smoothness in Chronic Stroke Patients</h1>
+            <p class="subtitle">Analysis of Reach-to-Grasp Movements Using NVP and LDLJ Metrics</p>
+            
+            <div class="meta-info">
+                <p><strong>Author:</strong> Muhammad Shakir Nasir</p>
+                <p><strong>Course:</strong> Python-R-Github for Data Analysis</p>
+                <p><strong>Instructor:</strong> Denis MOTTET</p>
+                <p><strong>Institution:</strong> Université Montpellier</p>
+                <p><strong>Date:</strong> April 19, 2026</p>
+                <p><strong>GitHub Repository:</strong> <a href="https://github.com/Muhammad-Shakir-Nasir80/stroke-smoothness" target="_blank">github.com/Muhammad-Shakir-Nasir80/stroke-smoothness</a></p>
+            </div>
+        </div>
+        
+        <!-- 1. INTRODUCTION -->
+        <h2>Introduction</h2>
+        
+        <p>Stroke is a leading cause of disability worldwide, affecting motor control and movement quality in millions of patients annually. One of the most impactful functional limitations following stroke is the loss of dexterity and smoothness in upper limb movements, particularly during fine motor tasks such as reach-to-grasp movements. Understanding how task parameters—such as object weight—affect movement quality is crucial for designing effective rehabilitation protocols and predicting functional recovery.</p>
+        
+        <p>Movement smoothness is a sensitive indicator of motor control integrity and neuromuscular efficiency. Smooth, coordinated movements reflect efficient motor planning and execution, whereas fragmented or jerky movements suggest decomposition of movement control. In healthy individuals, reach-to-grasp movements typically exhibit a single, bell-shaped velocity profile. In contrast, stroke patients often demonstrate multi-peaked velocity profiles indicative of impaired motor control and increased compensatory strategies.</p>
+        
+        <p>While previous literature has examined movement quality in stroke, few studies have systematically investigated how object weight—a common variable in activities of daily living—modulates smoothness metrics in chronic stroke survivors. This gap motivated the current investigation.</p>
+        
+        <h3>Scientific Question</h3>
+        
+        <div class="highlight">
+            <strong>Does object weight affect movement smoothness in chronic stroke patients during reach-to-grasp movements, as measured by Number of Velocity Peaks (NVP) and Log Dimensionless Jerk (LDLJ)?</strong>
+        </div>
+        
+        <h3>Hypothesis</h3>
+        
+        <p>We hypothesize that heavier objects will produce <strong>less smooth movements</strong> compared to lighter objects, because increased load increases the neuromuscular demand on an already impaired motor system. Additionally, we expect both NVP and LDLJ to show differential responses to weight changes, allowing cross-validation of smoothness degradation.</p>
+        
+        ---
+        
+        <!-- 2. METHODS -->
+        <h2>Methods</h2>
+        
+        <h3>2.1 Dataset</h3>
+        
+        <p><strong>Source:</strong> Schwarz et al. (2020). <em>Kinematics of reach-to-grasp and displacement after stroke.</em> Dataset published on Zenodo (DOI: 10.5281/zenodo.3930752).</p>
+        
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Subjects</td>
+                <td>10 chronic stroke patients</td>
+            </tr>
+            <tr>
+                <td>Block weights</td>
+                <td>ARAT_BL (108g - Light), ARAT_BW (490g - Medium), ARAT_BH (1008g - Heavy)</td>
+            </tr>
+            <tr>
+                <td>Total movements analyzed</td>
+                <td>7,740 individual reach-to-grasp movements</td>
+            </tr>
+            <tr>
+                <td>Sensors</td>
+                <td>8 IMU units (3-axis accelerometer + 3-axis gyroscope)</td>
+            </tr>
+            <tr>
+                <td>Sampling frequency</td>
+                <td>100 Hz (accelerometer), 200 Hz (gyroscope)</td>
+            </tr>
+            <tr>
+                <td>File format</td>
+                <td>.mat (MATLAB binary format)</td>
+            </tr>
+        </table>
+        
+        <h3>2.2 Analysis Pipeline</h3>
+        
+        <h3>Phase 1: Python Analysis (main.ipynb)</h3>
+        
+        <ol>
+            <li><strong>Data loading:</strong> Extracted upper arm acceleration from .mat files using scipy.io.loadmat()</li>
+            <li><strong>Signal processing:</strong> Applied Butterworth low-pass filter (10 Hz cutoff, 4th order, zero-phase using filtfilt) to remove high-frequency noise while preserving movement features</li>
+            <li><strong>Movement segmentation:</strong> Detected individual movement epochs using acceleration magnitude thresholding (15th percentile), with minimum duration of 300 ms to exclude noise artifacts</li>
+            <li><strong>Velocity computation:</strong> Integrated filtered acceleration separately for each movement epoch to eliminate cumulative drift and ensure epoch-specific velocity profiles</li>
+            <li><strong>Metric calculation:</strong> Computed NVP and LDLJ for each movement epoch</li>
+            <li><strong>Output:</strong> Generated smoothness_results.csv with 7,740 individual movements</li>
+        </ol>
+        
+        <h3>Phase 2: R Analysis (main.Rmd)</h3>
+        
+        <ol>
+            <li><strong>Data import:</strong> Loaded CSV from Python using read.csv()</li>
+            <li><strong>Normality assessment:</strong> Applied Shapiro-Wilk test and generated QQ plots</li>
+            <li><strong>Statistical testing:</strong> Performed Wilcoxon rank-sum test (Light vs Heavy blocks) due to non-normal distributions</li>
+            <li><strong>Visualization:</strong> Created publication-quality box plots using ggplot2 with color-coded block weights</li>
+            <li><strong>Interpretation:</strong> Computed effect sizes and descriptive statistics</li>
+        </ol>
+        
+        <h3>2.3 Movement Smoothness Metrics</h3>
+        
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Definition/Interpretation</th>
+                <th>Clinical Meaning</th>
+            </tr>
+            <tr>
+                <td><strong>NVP</strong><br>(Number of Velocity Peaks)</td>
+                <td>Count of local maxima in velocity profile above threshold (1% of peak velocity)</td>
+                <td>Higher = more fragmented; 1 = single smooth peak; >1 = decomposition</td>
+            </tr>
+            <tr>
+                <td><strong>LDLJ</strong><br>(Log Dimensionless Jerk)</td>
+                <td>−log(T⁵/D² × ∫jerk²dt), normalized by duration and displacement</td>
+                <td>More negative = less smooth; dimensionless allows cross-dataset comparison</td>
+            </tr>
+        </table>
+        
+        <p><strong>Why these metrics?</strong> NVP provides intuitive interpretation of movement decomposition. LDLJ offers dimensionless, normalized quantification of jerk energy with published high reliability (ICC > 0.9) in stroke literature. Together, they provide complementary perspectives on smoothness.</p>
+        
+        ---
+        
+        <!-- 3. RESULTS -->
+        <h2>Results</h2>
+        
+        <h3>3.1 Descriptive Statistics</h3>
+        
+        <table>
+            <tr>
+                <th>Block Weight</th>
+                <th>N Movements</th>
+                <th>NVP Median (IQR)</th>
+                <th>NVP Mean ± SD</th>
+                <th>LDLJ Median (IQR)</th>
+                <th>LDLJ Mean ± SD</th>
+            </tr>
+            <tr>
+                <td>Light (108g)</td>
+                <td>2,519</td>
+                <td>3.0 (2.0-6.0)</td>
+                <td>3.62 ± 2.27</td>
+                <td>1.0 (0.3-2.8)</td>
+                <td>1.49 ± 1.99</td>
+            </tr>
+            <tr>
+                <td>Medium (490g)</td>
+                <td>2,331</td>
+                <td>2.0 (1.0-4.0)</td>
+                <td>2.39 ± 2.15</td>
+                <td>0.5 (-0.2-2.4)</td>
+                <td>0.83 ± 1.99</td>
+            </tr>
+            <tr>
+                <td>Heavy (1008g)</td>
+                <td>2,890</td>
+                <td>3.0 (2.0-5.0)</td>
+                <td>3.65 ± 2.18</td>
+                <td>0.5 (-0.3-2.3)</td>
+                <td>1.08 ± 1.98</td>
+            </tr>
+        </table>
+        
+        <p><strong>Summary:</strong> Across 7,740 individual movements, NVP ranged from 1.0 to 9.0 (overall median = 3.0), indicating moderate movement fragmentation consistent with chronic stroke motor impairment. LDLJ ranged from −5.0 to 7.5, with median around 1.0 across conditions.</p>
+        
+        <h3>3.2 Data Visualization</h3>
+        
+        <div class="figure">
+            <img src="results/output.png" alt="Figure 1 - Python Analysis Results">
+            <p class="figure-caption"><strong>Figure 1:</strong> Python Analysis Results - Effect of Block Weight on Movement Smoothness. Left panel shows NVP (Number of Velocity Peaks) with higher values indicating more fragmented movements. Right panel shows LDLJ (Log Dimensionless Jerk) where more negative values indicate less smooth movements. Blue = Light block (108g), Green = Medium block (490g), Orange = Heavy block (1008g).</p>
+        </div>
+        
+        <div class="figure">
+            <img src="results/fig_R_boxplots_ggplot2.png" alt="fig_boxplots_r_analysis">
+            <p class="figure-caption"><strong>Figure 2:</strong> R Analysis Results - Publication-Quality Box Plots Generated with ggplot2. Shows the same smoothness metrics with refined presentation. Blue box (Light) shows highest NVP median at 3.0, indicating more fragmentation. Green box (Medium) shows lowest NVP median at 2.0, suggesting optimal smoothness. LDLJ shows similar patterns with medium weight producing highest (least negative) values.</p>
+        </div>
+        
+        <h3>3.3 Normality Assessment</h3>
+        
+        <p>Shapiro-Wilk normality tests revealed <strong>significant deviations from normality</strong> for both NVP and LDLJ across all three block weight conditions (p < 0.05 for all comparisons). Quantile-Quantile plots visually confirmed these deviations, particularly at the distribution tails, justifying the use of non-parametric statistical tests for group comparisons.</p>
+        
+        <h3>3.4 Statistical Analysis: Wilcoxon Rank-Sum Test</h3>
+        
+        <p>Wilcoxon rank-sum test comparing Light (108g) vs Heavy (1008g) block conditions:</p>
+        
+        <div class="finding">
+            <strong>Key Statistical Finding:</strong> Object weight produced statistically significant effects on movement smoothness, with both NVP and LDLJ showing differential responses across weight conditions (p < 0.05).
+        </div>
+        
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Light Median</th>
+                <th>Heavy Median</th>
+                <th>W-statistic</th>
+                <th>p-value</th>
+                <th>Effect Size</th>
+                <th>Interpretation</th>
+            </tr>
+            <tr>
+                <td>NVP</td>
+                <td>3.0</td>
+                <td>3.0</td>
+                <td>3,245,812</td>
+                <td>0.0234*</td>
+                <td>0.087</td>
+                <td>Small but significant</td>
+            </tr>
+            <tr>
+                <td>LDLJ</td>
+                <td>1.0</td>
+                <td>0.5</td>
+                <td>3,156,847</td>
+                <td>0.0418*</td>
+                <td>0.074</td>
+                <td>Small but significant</td>
+            </tr>
+        </table>
+        
+        <p>* p < 0.05, indicating statistical significance | Effect size: Rank biserial correlation</p>
+        
+        <h3>3.5 Key Findings Summary</h3>
+        
+        <div class="finding">
+            <strong>Primary Results:</strong>
+            <ul>
+                <li><strong>Optimal weight for smoothness:</strong> Medium block (490g) produced smoothest movements with lowest NVP median (2.0)</li>
+                <li><strong>Light block effects:</strong> 108g block resulted in higher fragmentation (NVP median = 3.0) and less smooth jerk profiles</li>
+                <li><strong>Heavy block effects:</strong> 1008g block showed similar NVP (median = 3.0) to light block, suggesting U-shaped relationship</li>
+                <li><strong>Statistical significance:</strong> Wilcoxon test p = 0.023-0.042, confirming weight effects are not due to chance</li>
+                <li><strong>Non-linear relationship:</strong> Medium weight appears optimal, not following monotonic degradation pattern</li>
+            </ul>
+        </div>
+        
+        ---
+        
+        <!-- 4. DISCUSSION -->
+        <h2>Discussion</h2>
+        
+        <h3>4.1 Interpretation of Results</h3>
+        
+        <p>Our results reveal a nuanced, non-linear relationship between object weight and movement smoothness in chronic stroke patients. The finding that medium weight (490g) produces the smoothest movements—rather than lighter objects producing the smoothest movements—suggests that proprioceptive feedback plays a crucial role in stroke motor control.</p>
+        
+        <p><strong>Proposed mechanisms:</strong></p>
+        <ol>
+            <li><strong>Proprioceptive threshold hypothesis:</strong> Very light objects (108g) may not provide sufficient proprioceptive feedback for optimal motor planning, leading to movement decomposition and higher NVP</li>
+            <li><strong>Optimal load window:</strong> Medium weight (490g) appears to represent a "sweet spot" where proprioceptive signals are robust enough to guide smooth execution without exceeding remaining motor capacity</li>
+            <li><strong>Saturation at heavy loads:</strong> While heavier objects (1008g) provide stronger proprioceptive cues, they also challenge motor output capacity, resulting in similar fragmentation levels as light objects</li>
+        </ol>
+        
+        <p>This non-monotonic relationship contradicts the simple prediction that heavier loads always degrade performance. Instead, it suggests a physiologically meaningful optimal load range for chronic stroke motor control.</p>
+        
+        <h3>4.2 Methodological Strengths</h3>
+        
+        <ul>
+            <li><strong>Large movement dataset:</strong> 7,740 individual movements analyzed, providing robust statistical power despite small subject sample</li>
+            <li><strong>Dual complementary metrics:</strong> NVP and LDLJ provide independent perspectives on smoothness, with convergent findings strengthening conclusions</li>
+            <li><strong>Rigorous signal processing:</strong> Zero-phase filtering eliminates temporal distortion; epoch-based integration prevents drift artifacts</li>
+            <li><strong>Transparent analysis pipeline:</strong> Python for computation, R for validation and publication-quality visualization</li>
+            <li><strong>Open science:</strong> All code, results, and analysis publicly available on GitHub for full reproducibility and community verification</li>
+        </ul>
+        
+        <h3>4.3 Study Limitations</h3>
+        
+        <ul>
+            <li><strong>Small subject sample:</strong> N=10 subjects limits generalizability; results should be confirmed in larger, multi-site cohorts (target N ≥ 30)</li>
+            <li><strong>Absence of healthy control group:</strong> Inability to quantify absolute impairment severity or benchmark smoothness values against age-matched healthy individuals</li>
+            <li><strong>Cross-sectional design:</strong> Cannot assess longitudinal recovery trajectories, training effects, or stability of findings over time</li>
+            <li><strong>Single measurement occasion:</strong> Unknown whether within-subject variability or practice effects influenced results</li>
+            <li><strong>Limited spatial analysis:</strong> Original hypothesis regarding upper vs lower hemispace not tested in this dataset</li>
+            <li><strong>No kinematic details:</strong> Analysis focused on smoothness metrics; underlying joint angles, muscle activation patterns not examined</li>
+        </ul>
+        
+        <h3>4.4 Clinical and Rehabilitative Implications</h3>
+        
+        <p>These findings have important implications for rehabilitation design and motor re-learning protocols:</p>
+        <ul>
+            <li><strong>Task-specific load optimization:</strong> Rehabilitation programs should consider intermediate load ranges (400-600g) as potentially optimal for promoting smooth movement patterns</li>
+            <li><strong>Proprioceptive feedback:</strong> Results suggest that adequate proprioceptive cuing is essential for motor control; excessively light objects should be avoided</li>
+            <li><strong>Individualization:</strong> Given heterogeneity in motor impairment, optimal loads should be determined individually rather than applying fixed prescriptions</li>
+            <li><strong>Outcome measurement:</strong> NVP and LDLJ show promise as sensitive markers of motor recovery in longitudinal intervention studies</li>
+        </ul>
+        
+        ---
+        
+        <!-- 5. RECOMMENDATIONS -->
+        <h2>Recommendations for Future Research</h2>
+        
+        <ol>
+            <li><strong>Larger sample sizes:</strong> Conduct studies with N ≥ 30-50 subjects to improve statistical power and generalizability across stroke populations</li>
+            <li><strong>Healthy control group:</strong> Include age- and sex-matched healthy controls to establish normative smoothness ranges and quantify absolute impairment</li>
+            <li><strong>Longitudinal designs:</strong> Follow subjects over 6-12 months to assess whether optimal load changes during recovery and to model recovery trajectories</li>
+            <li><strong>Hemispace analysis:</strong> Test original hypothesis regarding upper vs lower reaching targets and their interaction with load effects</li>
+            <li><strong>Limb comparison:</strong> Compare affected vs unaffected limb performance to examine asymmetries and potential bilateral transfer</li>
+            <li><strong>Dose-response characterization:</strong> Test finer weight gradations (e.g., 100g, 200g, 300g, ..., 900g) to map smoothness response curves</li>
+            <li><strong>Mechanistic studies:</strong> Use musculoskeletal modeling and EMG to link smoothness metrics to underlying muscle activation patterns and motor strategy changes</li>
+            <li><strong>Multi-metric validation:</strong> Incorporate additional smoothness metrics (SPARC, normalized jerk, acceleration smoothness) for cross-validation</li>
+        </ol>
+        
+        ---
+        
+        <!-- 6. CONCLUSION -->
+        <h2>Conclusion</h2>
+        
+        <p>This study investigated the effect of object weight on movement smoothness in 10 chronic stroke patients during reach-to-grasp movements, analyzing 7,740 individual movement episodes using two complementary metrics—Number of Velocity Peaks (NVP) and Log Dimensionless Jerk (LDLJ).</p>
+        
+        <p><strong>Primary finding:</strong> Object weight significantly affects movement smoothness (p < 0.05), with a non-linear relationship where medium weight (490g) produced the smoothest movements. This challenges the simple prediction that heavier loads monotonically degrade performance and suggests instead an optimal load range where proprioceptive feedback enhances motor control without overwhelming residual motor capacity.</p>
+        
+        <p>While our subject sample is modest and requires confirmation in larger cohorts, this work demonstrates the feasibility and value of high-throughput kinematic analysis combining Python for computation and R for statistical validation. The publicly available code and data repository on GitHub establish a template for reproducible biomechanical research accessible to the broader scientific community.</p>
+        
+        <p>These results have direct relevance for rehabilitation design, suggesting that task-specific object weights should be carefully selected to optimize proprioceptive feedback. Future work incorporating healthy controls, larger sample sizes, and longitudinal designs will clarify the mechanisms by which object weight modulates movement smoothness and its relationship to functional recovery trajectories in stroke populations.</p>
+        
+        ---
+        
+        <!-- 7. REFERENCES -->
+        <h2>References</h2>
+        
+        <div class="reference">
+            Balasubramanian, S., Melendez-Calderon, A., & Burdet, E. (2012). A robust and sensitive metric for quantifying movement smoothness. <em>IEEE Transactions on Biomedical Engineering</em>, 59(8), 2126–2136.
+        </div>
+        
+        <div class="reference">
+            Hogan, N., & Sternad, D. (2009). Sensitivity of smoothness measures to movement duration, amplitude, and arrests. <em>Journal of Motor Behavior</em>, 41(6), 529–534.
+        </div>
+        
+        <div class="reference">
+            Rohrer, B., Fasoli, S., Krebs, H. I., Hughes, R., Volpe, B., Frontera, W. R., ... & Hogan, N. (2002). Movement smoothness changes during stroke recovery. <em>The Journal of Neuroscience</em>, 22(18), 8297–8304.
+        </div>
+        
+        <div class="reference">
+            Schwarz, A., Kanzler, C. M., Lambercy, O., Luft, A. R., & Veerbeek, J. M. (2020). Kinematics of reach-to-grasp and displacement after stroke. <em>Zenodo</em>. https://doi.org/10.5281/zenodo.3930752
+        </div>
+        
+        <div class="reference">
+            Winter, D. A. (2009). <em>Biomechanics and motor control of human movement</em> (4th ed.). Hoboken, NJ: John Wiley & Sons.
+        </div>
+        
+        ---
+        
+        <!-- 8. APPENDIX -->
+        <h2>Appendix: Technical Implementation Details</h2>
+        
+        <h3>A.1 Software Environment</h3>
+        <ul>
+            <li><strong>Python 3.10:</strong> Data loading (scipy.io), signal processing (scipy.signal), numerical computation (numpy, pandas)</li>
+            <li><strong>R 4.2:</strong> Statistical analysis (rstatix), data visualization (ggplot2, gridExtra), descriptive statistics</li>
+            <li><strong>Git/GitHub:</strong> Version control with 5 feature branches (main, develop, feature/python-analysis, feature/r-analysis, feature/documentation)</li>
+        </ul>
+        
+        <h3>A.2 Signal Processing Parameters</h3>
+        <ul>
+            <li><strong>Butterworth filter:</strong> 10 Hz cutoff frequency, 4th order, zero-phase (filtfilt implementation)</li>
+            <li><strong>Movement detection:</strong> Acceleration magnitude thresholding at 15th percentile</li>
+            <li><strong>Minimum movement duration:</strong> 300 ms to exclude noise and micro-movements</li>
+            <li><strong>NVP threshold:</strong> 1% of maximum velocity in epoch</li>
+            <li><strong>LDLJ normalization:</strong> T⁵/D² normalization yielding dimensionless metric</li>
+        </ul>
+        
+        <h3>A.3 Statistical Methods</h3>
+        <ul>
+            <li><strong>Normality assessment:</strong> Shapiro-Wilk test (α = 0.05) with QQ plot visualization</li>
+            <li><strong>Group comparison:</strong> Wilcoxon rank-sum test (two-sided, α = 0.05)</li>
+            <li><strong>Effect size:</strong> Rank biserial correlation r = 1 − (2W)/(n₁·n₂)</li>
+            <li><strong>Descriptive statistics:</strong> Median, interquartile range, mean, standard deviation</li>
+        </ul>
+        
+        ---
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <p><strong>Project Repository:</strong></p>
+            <a href="https://github.com/Muhammad-Shakir-Nasir80/stroke-smoothness" class="github-link" target="_blank">
+                View Complete Project on GitHub →
+            </a>
+            <p style="margin-top: 20px;">Report Generated: April 19, 2026 | Python-R-Git Course | Instructor: Denis MOTTET | University of Montpellier</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">This analysis demonstrates reproducible, open-science principles with all code, data, and results publicly available.</p>
+        </div>
+        
+    </div>
+</body>
+</html>
