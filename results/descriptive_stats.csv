@@ -1,0 +1,6 @@
+,NVP,NVP,NVP,NVP,LDLJ,LDLJ,LDLJ,LDLJ
+,count,mean,std,median,count,mean,std,median
+block_type,,,,,,,,
+ARAT_BH,2518,3.619,2.27,3.0,2518,1.344,2.009,1.388
+ARAT_BL,2315,3.587,2.336,3.0,2315,1.292,1.969,1.384
+ARAT_BW,2907,3.647,2.18,3.0,2907,1.772,1.984,1.896
