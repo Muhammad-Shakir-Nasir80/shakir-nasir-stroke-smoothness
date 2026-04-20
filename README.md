@@ -2,13 +2,13 @@
 
 
 
-\*\*Course:\*\* Python-R-Git for data analysis  
+\\Course:\\ Python-R-Git for data analysis  
 
-\*\*Student:\*\* shakir nasir  
+\\Student:\\ shakir nasir  
 
-\*\*Date:\*\* 2026-04-19  
+\\Date:\\ 2026-04-19  
 
-\*\*GitHub:\*\* https://github.com/Muhammad-Shakir-Nasir80/shakir-nasir-stroke-smoothness
+\\GitHub:\\ https://github.com/Muhammad-Shakir-Nasir80/shakir-nasir-stroke-smoothness
 
 
 
